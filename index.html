@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics & Box Model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Basics & The Box Model</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#examples">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="introduction" class="section">
+            <h2>Understanding CSS Fundamentals</h2>
+            <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+            
+            <div class="card">
+                <h3>Why CSS Matters</h3>
+                <p>CSS is essential for creating visually appealing websites. It allows developers to separate content from presentation, making websites more maintainable and accessible.</p>
+                <ul>
+                    <li>Separation of concerns</li>
+                    <li>Consistent design across pages</li>
+                    <li>Easier maintenance</li>
+                    <li>Improved accessibility</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="box-model" class="section">
+            <h2>The CSS Box Model</h2>
+            <p>In CSS, every element is represented as a rectangular box. The CSS Box Model describes how these boxes are structured and how their dimensions are calculated.</p>
+            
+            <div class="box-model-container">
+                <div class="box-model-visual">
+                    <div class="margin-box">
+                        <div class="border-box">
+                            <div class="padding-box">
+                                <div class="content-box">
+                                    Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box-model-explanation">
+                    <h3>Box Model Components</h3>
+                    <div class="component">
+                        <div class="component-label">Content</div>
+                        <p>The actual content of the box, where text and images appear.</p>
+                    </div>
+                    <div class="component">
+                        <div class="component-label">Padding</div>
+                        <p>Transparent area around the content inside the border.</p>
+                    </div>
+                    <div class="component">
+                        <div class="component-label">Border</div>
+                        <p>The edge around the padding (if any) and content.</p>
+                    </div>
+                    <div class="component">
+                        <div class="component-label">Margin</div>
+                        <p>Transparent area outside the border, separating elements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties" class="section">
+            <h2>Essential CSS Properties</h2>
+            <p>These fundamental CSS properties control the visual presentation and layout of elements on a webpage.</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <h3>Margin</h3>
+                    <p>Creates space <strong>outside</strong> an element's border.</p>
+                    <div class="property-example margin-example">
+                        <div class="box">Box with margin</div>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <h3>Padding</h3>
+                    <p>Creates space <strong>inside</strong> an element's border.</p>
+                    <div class="property-example padding-example">
+                        <div class="box">Box with padding</div>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <h3>Border</h3>
+                    <p>Defines the edge around an element's padding and content.</p>
+                    <div class="property-example border-example">
+                        <div class="box">Box with border</div>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <h3>Background</h3>
+                    <p>Sets background colors, images, and other visual effects.</p>
+                    <div class="property-example background-example">
+                        <div class="box">Box with background</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="section">
+            <h2>Box Model in Practice</h2>
+            <p>See how different box model properties affect element dimensions and spacing.</p>
+            
+            <div class="examples-container">
+                <div class="example">
+                    <h3>Standard Box Model (content-box)</h3>
+                    <p>Width and height apply only to the content area.</p>
+                    <div class="box-model-example content-box-example">
+                        <div class="box">Width: 200px<br>Padding: 20px<br>Border: 5px</div>
+                    </div>
+                    <p class="calculation">Total width: 200 + (20×2) + (5×2) = 250px</p>
+                </div>
+                
+                <div class="example">
+                    <h3>Border Box Model</h3>
+                    <p>Width and height include padding and border.</p>
+                    <div class="box-model-example border-box-example">
+                        <div class="box">Width: 200px<br>Padding: 20px<br>Border: 5px</div>
+                    </div>
+                    <p class="calculation">Total width: 200px (includes padding and border)</p>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <h3>Interactive Box Model Demo</h3>
+                <p>Adjust the values below to see how the box model works:</p>
+                <div class="demo-box">
+                    <div class="demo-content">Adjustable Box</div>
+                </div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="width">Width (px):</label>
+                        <input type="range" id="width" min="100" max="300" value="200">
+                        <span id="width-value">200</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="padding">Padding (px):</label>
+                        <input type="range" id="padding" min="0" max="30" value="15">
+                        <span id="padding-value">15</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="border">Border (px):</label>
+                        <input type="range" id="border" min="0" max="10" value="3">
+                        <span id="border-value">3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+         <p>&copy; 2025 Week 3 Assignment . All rights reserved.</p>
+        <p>CSS Basics & Box Model Assignment | Created with HTML and CSS</p>
+    </footer>
+</body>
+</html>
